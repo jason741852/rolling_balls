@@ -9,17 +9,29 @@ public class PlayerController : MonoBehaviour {
 
     private Rigidbody rb;
     private int count;
+    private int playerID;
 
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
+        playerID = (int)char.GetNumericValue(this.gameObject.name[6]);
         count = 0;
         SetCountText();
     }
 	void FixedUpdate ()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        float moveHorizontal=0;
+        float moveVertical=0;
+        if (playerID == 1)
+        {
+            moveHorizontal = Input.GetAxis("P1_Horizontal");
+            moveVertical = Input.GetAxis("P1_Vertical");
+        }
+        else if(playerID == 2)
+        {
+            moveHorizontal = Input.GetAxis("P2_Horizontal");
+            moveVertical = Input.GetAxis("P2_Vertical");
+        }
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
@@ -38,6 +50,6 @@ public class PlayerController : MonoBehaviour {
 
     void SetCountText ()
     {
-       countText.text = "Count: " + count.ToString();
+       countText.text = this.gameObject.name + " Count: " + count.ToString();
     }
 }
