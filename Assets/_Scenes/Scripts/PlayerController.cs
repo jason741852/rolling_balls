@@ -8,8 +8,14 @@ public class PlayerController : MonoBehaviour {
     public Text countText;
 
     private Rigidbody rb;
-    private int count;
+    private int count=0;
     private int playerID;
+
+    // accessor
+    public int getCount()
+    {
+        return count;
+    }
 
     void Start ()
     {
@@ -43,7 +49,7 @@ public class PlayerController : MonoBehaviour {
         if(other.gameObject.CompareTag("Pick Up"))
         {
             other.gameObject.SetActive(false);
-            count++ ;
+            count++;
             SetCountText();
         }
     }
