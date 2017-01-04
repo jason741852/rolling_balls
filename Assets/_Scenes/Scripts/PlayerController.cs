@@ -28,6 +28,12 @@ public class PlayerController : MonoBehaviour {
     {
         float moveHorizontal=0;
         float moveVertical=0;
+
+        ///////////////////////////////////////////////////////
+        // if you wish to add more players, change this part //
+        // and in Unity, go to edit->project setting->input  //
+        // to add more axes and add the axes here accordingly//
+        ///////////////////////////////////////////////////////
         if (playerID == 1)
         {
             moveHorizontal = Input.GetAxis("P1_Horizontal");
