@@ -4,8 +4,12 @@ using System.Collections;
 
 public class GameOverCheck : MonoBehaviour {
     public Text GameOverText;
+    public Button MenuButton;
+    public Button RestartButton;
+    public Button NextLevelButton;
 
     private GameObject[] Players;
+    private GameObject[] Buttons;
     private int PickupsNumber;
     private int TotalCount;
     private int Count;

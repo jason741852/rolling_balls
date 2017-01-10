@@ -71,7 +71,9 @@
   <ItemGroup>
     <Compile Include="Assets\_Scenes\Scripts\CameraController.cs" />
     <Compile Include="Assets\_Scenes\Scripts\GameOverCheck.cs" />
-    <Compile Include="Assets\_Scenes\Scripts\Menu\LoadScene.cs" />
+    <Compile Include="Assets\_Scenes\Scripts\Menu\LoadLevel1.cs" />
+    <Compile Include="Assets\_Scenes\Scripts\Menu\LoadLevel2.cs" />
+    <Compile Include="Assets\_Scenes\Scripts\Menu\LoadMenu.cs" />
     <Compile Include="Assets\_Scenes\Scripts\PlayerController.cs" />
     <Compile Include="Assets\_Scenes\Scripts\Rotator.cs" />
   </ItemGroup>
